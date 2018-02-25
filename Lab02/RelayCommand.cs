@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace CSharpLab02
+namespace Lab02
 {
     public class RelayCommand : ICommand
     {

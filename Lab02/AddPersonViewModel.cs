@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using CSharpLab02.Annotations;
 
-namespace CSharpLab02
+namespace Lab02
 {
     internal class AddPersonViewModel : INotifyPropertyChanged
     {
@@ -97,7 +97,6 @@ namespace CSharpLab02
                 catch (ArgumentException)
                 {
                     MessageBox.Show("Person's age cannot be less than 0 or higher than 135");
-                    
                 }
             });
 

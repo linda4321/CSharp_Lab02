@@ -1,7 +1,8 @@
 ﻿using System.Windows;
+using CSharpLab02;
 using FontAwesome.WPF;
 
-namespace CSharpLab02
+namespace Lab02
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using FontAwesome.WPF;
 
-namespace CSharpLab02
+namespace Lab02
 {
     internal static class LoaderHelper
     {

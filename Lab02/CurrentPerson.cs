@@ -1,4 +1,4 @@
-﻿namespace CSharpLab02
+﻿namespace Lab02
 {
     internal class CurrentPerson
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace CSharpLab02
+namespace Lab02
 {
     internal class Person
     {
@@ -12,7 +12,6 @@ namespace CSharpLab02
         private readonly string _email;
         private readonly DateTime _dateOfBirth;
 
-        private readonly int _age;
         private readonly bool _isAdult;
         private readonly string _westernZodiac;
         private readonly string _chineeseZodiac;
@@ -25,42 +24,23 @@ namespace CSharpLab02
             _email = email;
             _dateOfBirth = dateOfBirth;
 
-            _age = GetAge();
-            if (_age < 0 || _age > 135)
+            var age = GetAge();
+            if (age < 0 || age > 135)
                 throw new ArgumentException("Invalid date of birth");
 
-            _isAdult = (_age > 18);
+            _isAdult = age > 18;
             _westernZodiac = GetWesternZodiac();
             _chineeseZodiac = GetEasternZodiac();
             _isBirthday = IsBirthdayToday();
         }
 
-        internal Person(string firstName, string lastName, string email)
+        internal Person(string firstName, string lastName, string email):this(firstName, lastName, email, DateTime.Today)
         {
-            _firstName = firstName;
-            _lastName = lastName;
-            _email = email;
-            _dateOfBirth = DateTime.Today;
-
-            _age = GetAge();
-            _isAdult = (_age > 18);
-            _westernZodiac = GetWesternZodiac();
-            _chineeseZodiac = GetEasternZodiac();
-            _isBirthday = IsBirthdayToday();
         }
 
-        internal Person(string firstName, string lastName, DateTime dateOfBirth)
+        internal Person(string firstName, string lastName, DateTime dateOfBirth) : this(firstName, lastName,
+            string.Empty, dateOfBirth)
         {
-            _firstName = firstName;
-            _lastName = lastName;
-            _email = string.Empty;
-            _dateOfBirth = dateOfBirth;
-
-            _age = GetAge();
-            _isAdult = (_age > 18);
-            _westernZodiac = GetWesternZodiac();
-            _chineeseZodiac = GetEasternZodiac();
-            _isBirthday = IsBirthdayToday();
         }
 
         internal string FirstName { get { return _firstName; } }
